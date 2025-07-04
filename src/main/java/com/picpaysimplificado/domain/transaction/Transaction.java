@@ -1,19 +1,26 @@
 package com.picpaysimplificado.domain.transaction;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import com.picpaysimplificado.domain.user.User;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.NoArgsConstructor;
+
+
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
 
 @Entity(name="transactions")
 @Table(name="transactions")
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(of="id")
+
 public class Transaction {
 
 	@Id
